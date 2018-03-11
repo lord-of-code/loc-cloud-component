@@ -1,0 +1,11 @@
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://eureka-server-master:1111/eureka,http://eureka-server-slave:1111/eureka
+  instance:
+    hostname: eureka-server-slave
+    prefer-ip-address: true          #将IP注册到Eureka Server上，而如果不配置就是机器的主机名
+  server:
+    enable-self-preservation: false  #关闭自我保护模式

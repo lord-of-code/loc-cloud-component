@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  eureka-server-master:
+    hostname: master             # 指定hostname
+    restart: always
+    container_name: master
+    image: loc-cloud-component/eureka-server:lastest
+    links:
+      - eureka-server-slave
+    ports:
+      - "1314:1314"
+    environment:
+      - spring.profiles.active=master
+  eureka-server-slave:
+    hostname: slave
+    restart: always
+    container_name: slave
+    image: loc-cloud-component/eureka-server:lastest
+    links:
+      - eureka-server-master
+    ports:
+      - "1315:1314"
+    environment:
+      - spring.profiles.active=slave

@@ -1,0 +1,14 @@
+server:
+  port: 1314
+spring:
+  profiles:
+    active: master
+  application:
+    name: loc-cloud-eureka-server
+
+
+
+
+
+
+
