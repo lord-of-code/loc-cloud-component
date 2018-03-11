@@ -3,7 +3,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     serviceUrl:
-      defaultZone: http://eureka-server-1:1314/eureka,http://eureka-server-2:1314/eureka
+      defaultZone: http://eureka-server-slave:${server.port}/eureka
   instance:
     hostname: eureka-server-master
     prefer-ip-address: true          #将IP注册到Eureka Server上，而如果不配置就是机器的主机名
