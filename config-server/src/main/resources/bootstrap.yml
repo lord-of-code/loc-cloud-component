@@ -1,0 +1,16 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: loc-cloud-config-server
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lord-of-code/loc-cloud-config-repo.git
+          searchPaths: /{application}
+          force-pull: true
+          basedir: "/opt/config"
