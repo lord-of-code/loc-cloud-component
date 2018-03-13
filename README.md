@@ -16,3 +16,7 @@ docker-compose run -d --service-ports eureka-server-master
 
 ### erueka-slave
 docker-compose run -d --service-ports eureka-server-slave
+
+
+### config-server
+docker-compose run -d --service-ports config-server
