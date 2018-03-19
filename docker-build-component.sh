@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-modules=( eureka-server, config-server, admin-server )
+modules=( eureka-server config-server admin-server )
 
 for module in "${modules[@]}"; do
     docker build -t "loc-cloud-component/${module}:latest" ${module}
