@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  config-server:
+    image: loc-cloud-component/config-server
+    hostname: config-server
+    restart: always
+    container_name: config-server
+    ports:
+      - "8888:8888"

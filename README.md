@@ -3,20 +3,17 @@
 
 
 
-
 ## 编译build阶段
 mvn clean package
 
 bash docker-build-component.sh
 
 
-### erueka-master
-docker-compose run -d --service-ports eureka-server-master
-
-
-### erueka-slave
-docker-compose run -d --service-ports eureka-server-slave
-
+### eureka-master/slave
+docker-compose -f docker/eureka.yml up -d
 
 ### config-server
-docker-compose run -d --service-ports config-server
+docker-compose -f docker/config.yml up -d
+
+### admin-server
+docker-compose -f docker/admin.yml up -d

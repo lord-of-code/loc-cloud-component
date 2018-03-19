@@ -24,6 +24,7 @@
   <modules>
     <module>eureka-server</module>
     <module>config-server</module>
+    <module>admin-server</module>
   </modules>
 
   <build>

@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  admin-server:
+    image: loc-cloud-component/admin-server
+    hostname: admin-server
+    restart: always
+    container_name: admin-server
+    ports:
+      - "8090:8090"
